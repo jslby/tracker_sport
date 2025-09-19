@@ -376,8 +376,7 @@
       const ton = sum(b.sets, s=>s.tonnage||0);
       lines.push(`• ${ex?.name||'Упражнение'}: ${repsTotal} повт., ${ton.toFixed(0)} кг`);
     }
-    return lines.join('
-');
+    return lines.join('');
   }
   function copyShare(text){ navigator.clipboard.writeText(text); toast('Сводка скопирована'); }
 function shareById(id){ const w = workouts.find(x=>x.id===id); if(!w){ toast('Не найдено'); return } copyShare(shareWorkout(w)); }
